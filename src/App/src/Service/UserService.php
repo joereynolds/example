@@ -2,23 +2,18 @@
 
 namespace App\Service;
 
+use GuzzleHttp\Client;
+
 class UserService
 {
     const API_URL = 'https://jsonplaceholder.typicode.com/users';
 
     public function get()
     {
-        $profiles = [
-            "profiles" => [
-                [
-                'image' => 'assets/male-profile.jpeg',
-                'name' => 'Jim Johnson',
-                'phone' => '07804235435',
-                'email' => 'jimjohnson@gmail.com',
-                ],
-            ]
-        ];
+        $client = new Client();
+        $response = $client->get(self::API_URL);
+        $profiles = json_decode($response->getBody());
 
-        return $profiles;
+        return ['profiles' => $profiles];
     }
 }

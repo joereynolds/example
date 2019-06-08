@@ -8,19 +8,18 @@
 
     {% for profile in profiles %}
         <div class="profile">
-            <div class="profile__image"><img src="{{ profile.image }}"></div>
+            <div class="profile__image"><img src="https://via.placeholder.com/150"></div>
             <div class="profile__content">
                 <h1 class="profile__name">{{ profile.name }}</h1>
                 <div class="profile__phone">
-                    <a href="tel:{{profile.phone}}">{{ profile.phone }}</a>
+                    <a href="tel:{{profile.phone}}">{{ profile.phone}}</a>
                 </div>
                 <div class="profile__email">
-                    <a href="mailto:{{profile.email}}">{{ profile.email }}</a>
+                    <a href="mailto:{{profile.email}}">{{ profile.email}}</a>
                 </div>
             </div>
         </div>
     {% endfor %}
-
 </div>
 
 {% endblock %}
