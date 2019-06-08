@@ -1,0 +1,29 @@
+html {
+    font-family: "Mate";
+}
+
+
+.profile {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.profile__image {
+    display: inline-block;
+}
+
+.profile__content {
+    display: inline-block;
+}
+
+.profile__name {
+
+}
+
+.profile__phone {
+
+}
+
+.profile__email {
+
+}
