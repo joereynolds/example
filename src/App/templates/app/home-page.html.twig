@@ -7,10 +7,11 @@
 <div class="profiles">
 
     {% for profile in profiles %}
+
         <div class="profile">
-            <div class="profile__image"><img src="https://via.placeholder.com/150"></div>
+            <div class="profile__image"><img src="https://via.placeholder.com/50"></div>
             <div class="profile__content">
-                <h1 class="profile__name">{{ profile.name }}</h1>
+                <div class="profile__name">{{ profile.name }}</div>
                 <div class="profile__phone">
                     <a href="tel:{{profile.phone}}">{{ profile.phone}}</a>
                 </div>
@@ -19,6 +20,7 @@
                 </div>
             </div>
         </div>
+
     {% endfor %}
 </div>
 
