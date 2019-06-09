@@ -22,10 +22,11 @@ class HomePageHandler implements RequestHandlerInterface
     public $userService;
 
     public function __construct(
-        TemplateRendererInterface $template
+        TemplateRendererInterface $template,
+        UserService $userService
     ) {
         $this->template = $template;
-        $this->userService = new UserService();
+        $this->userService = $userService;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface 
